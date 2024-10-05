@@ -65,11 +65,11 @@ class Tres_En_Raya:
                 # Verificar si hay ganador o empate
                 if tres.check_ganador(tres,matriz_tablero):
                     tres.mostrar_tablero(tres,matriz_tablero)
-                    print("¡La máquina ha ganado!")
+                    print("¡skynet te ha ganado!")
                     control_juego = False
                 elif tres.tablero_lleno(tres,matriz_tablero):
                     tres.mostrar_tablero(tres,matriz_tablero)
-                    print("¡Es un empate!")
+                    print("¡Es un empate, que cosas!")
                     control_juego = False
                 else:
                     jugador_actual = tres.cambiar_turno(tres,jugador_actual)
