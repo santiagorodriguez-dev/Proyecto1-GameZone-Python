@@ -5,6 +5,7 @@ import random
 class Preguntados_Support:
 
     categorias = ["Cultura General", "Historia", "Entretenimiento", "Ciencia"]
+    num_preguntas = 10
 
     def read_data_file(self):
 
