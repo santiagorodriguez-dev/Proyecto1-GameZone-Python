@@ -1,8 +1,7 @@
-from src.support_01_preguntados import *
+from src.preguntados import Preguntados as pgm
 
 def main():
-    object = Mascota("rojo","gato",3,4,"pekines")
-    print(object.color)
+   pgm.inicio_preguntados(pgm)
 
 if __name__ == "__main__":
    main()
