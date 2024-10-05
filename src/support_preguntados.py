@@ -6,6 +6,7 @@ class Preguntados_Support:
 
     categorias = ["Cultura General", "Historia", "Entretenimiento", "Ciencia"]
     num_preguntas = 10
+    num_para_victorias = 10
 
     def read_data_file(self):
 
@@ -30,7 +31,6 @@ class Preguntados_Support:
     def extrae_respuestas_pregunta(self, pregunta):
 
         result = []
-
         for clave, valor in pregunta.items():
             if(isinstance(valor, dict)):
                 for clave_sub, valor_sub in valor.items():
@@ -38,9 +38,19 @@ class Preguntados_Support:
 
         return result
     
-    def input_data(self):
+    def input_data_valida(self):
         dato = input()
+        dato = dato.lower()
         if dato == 'a' or dato == 'b' or dato == 'c' or  dato == 'd':
             return dato
         else:
             return 'z'
+        
+
+    def mostrar_menu(self):
+        print("*************************")
+        print("**  JUEGO APALABRADOS  **")
+        print("*************************")
+        print("1. Jugar")
+        print("2. Salir")
+        print("*************************")
