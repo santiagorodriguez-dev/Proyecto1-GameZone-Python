@@ -23,9 +23,6 @@ class TresEnRaya:
 
     def tres_en_raya(self):
 
-        def __init__(self, salida):
-            self.salida = salida
-
         try:
             matriz_tablero = tres.inicializar_tablero(tres)
             jugador_actual = "X"

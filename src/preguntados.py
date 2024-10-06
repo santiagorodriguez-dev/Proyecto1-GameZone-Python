@@ -6,17 +6,11 @@ from src.preguntados_util import PreguntadosUtil as pre_util
     Esta clase gestiona el flujo del juego, incluyendo la visualización del menú, 
     la selección y presentación de preguntas, así como la verificación de respuestas del usuario.
 
-    Atributos:
-        salida (bool): Indica si se debe salir del juego.
-
     Métodos:
         inicio_preguntados(): Inicia el juego, mostrando el menú y gestionando la lógica de juego.
 """
 
 class Preguntados:
-
-    def __init__(self, salida):
-        self.salida = salida
 
     def inicio_preguntados(self):  
         def menu():
