@@ -1,4 +1,4 @@
-from src.ahorcadoUtil import AhorcadoUtil
+from src.ahorcado_util import AhorcadoUtil
 
 """
     Clase principal para el juego del Ahorcado.
