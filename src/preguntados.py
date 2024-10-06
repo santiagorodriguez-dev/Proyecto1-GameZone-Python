@@ -20,16 +20,20 @@ class Preguntados:
 
     def inicio_preguntados(self):  
         def menu():
-            while True:
-                pre_util.mostrar_menu(pre_util)
-                opcion = input("Elige una opción (1-2): ")
-                if opcion == '1':
-                    jugar()
-                elif opcion == '2':
-                    salir()
-                    break
-                else:
-                    print("\nOpción no válida. Elige una opción entre 1 y 2.\n")
+            try:
+                while True:
+                    pre_util.mostrar_menu(pre_util)
+                    opcion = input("Elige una opción (1-2): ")
+                    if opcion == '1':
+                        jugar()
+                    elif opcion == '2':
+                        break
+                    else:
+                        print("\nOpción no válida. Elige una opción entre 1 y 2.\n")
+            except:
+                print("\n-----------------------------------------------------")
+                print("Error el main principal del juego, salimos al menu")
+                print("-----------------------------------------------------")
 
         def jugar():
             # INI Cargamos datos
@@ -80,9 +84,6 @@ class Preguntados:
                         print("\n")
                         salir_de_partida = True
                         break
-
-        def salir():
-            self.salida = True
 
         #cargamos el menu del juego
         menu()
