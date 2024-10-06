@@ -1,5 +1,19 @@
 from src.ahorcadoUtil import AhorcadoUtil
 
+"""
+    Clase principal para el juego del Ahorcado.
+
+    Esta clase gestiona la lógica del juego, incluyendo la selección de palabras relacionadas con comidas de España, 
+    el seguimiento de intentos y la interacción con el usuario.
+
+    Atributos:
+        salida (bool): Indica si se debe salir del juego o volver al menú principal.
+
+    Métodos:
+        jugar(): Inicia una partida del juego del Ahorcado, gestiona la lógica de adivinanza y muestra el progreso.
+        menu(): Muestra el menú principal del juego, permitiendo al usuario elegir jugar o salir.
+    """
+
 class AhorcadoMain:
 
     def __init__(self, salida):
@@ -43,10 +57,11 @@ class AhorcadoMain:
             
     def menu(self):
         try:
+            self.salida = True
             while True:
                 print("\n--- Ahorcado ---")
                 print("1. Jugar")
-                print("2. Salir")
+                print("2. Salir (Vuelve al menu principal)")
 
                 opcion = input("Elige una opción: ")
 
