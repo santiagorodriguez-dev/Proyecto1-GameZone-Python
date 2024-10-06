@@ -97,7 +97,7 @@ class PreguntadosUtil:
 
     def mostrar_menu(self):
         print("*************************")
-        print("**  JUEGO APALABRADOS  **")
+        print("**  JUEGO PREGUNTADOS  **")
         print("*************************")
         print("1. Jugar")
         print("2. Salir al menu principal de juegos")

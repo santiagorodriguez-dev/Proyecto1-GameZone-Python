@@ -49,8 +49,7 @@ class Preguntados:
                 if salir_de_partida == True:
                     break
                 else:
-                    print("\n")
-                    print("------------------------------------------------------------------")
+                    print("\n------------------------------------------------------------------")
                     print(f"Respuestas acertadas: {contador_aciertos}")
                     print(pregunta.get('Pregunta'))
                     respuestas = pre_util.extrae_respuestas_pregunta(pre_util,pregunta)
@@ -58,24 +57,19 @@ class Preguntados:
                     for pre,resp in respuestas:
                         print(pre)
 
-                    print("------------------------------------------------------------------")
-                    print("\n")
+                    print("------------------------------------------------------------------\n")
                     resp_usuario = pre_util.input_data_valida(pre_util)
                     if resp_usuario != 'z':
                             for r,v in respuestas:
                                 if r[:1] == resp_usuario and v is True:
-                                    print("Has Acertado")
+                                    print("\nHas Acertado")
                                     contador_aciertos = contador_aciertos  + 1
                                     if (contador_aciertos == pre_util.num_para_victorias):
                                         salir_de_partida = True
-                                        print("\n")
-                                        print("Has Ganado!!!")
-                                        print("\n")
+                                        print("\nHas Ganado!!!")
                                     break
                                 else:
-                                    print("\n")
-                                    print("La respuesta no es correta")
-                                    print("\n")
+                                    print("\nLa respuesta no es correta")
                                     salir_de_partida = True
                                     break
                     else:

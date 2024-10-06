@@ -14,6 +14,13 @@ from src.tres_en_raya_util import TresEnRayaUtil as tres
 
 class TresEnRaya:
 
+    def texto_inicial(self):
+        print("Tres en Raya")
+        print("Selecciona el modo de juego:")
+        print("1. Dos jugadores")
+        print("2. Jugar contra la máquina")
+        print("3. Salir")
+
     def tres_en_raya(self):
 
         def __init__(self, salida):
@@ -23,21 +30,21 @@ class TresEnRaya:
             matriz_tablero = tres.inicializar_tablero(tres)
             jugador_actual = "X"
             
-            print("Tres en Raya")
-            print("Selecciona el modo de juego:")
-            print("1. Dos jugadores")
-            print("2. Jugar contra la máquina")
+            self.texto_inicial(self)
             
-            modo_game = input("Elige una opción (1 o 2): ")
+            modo_game = input("Elige una opción: ")
             
-            if modo_game != '1' and modo_game != '2':
+            if modo_game != '1' and modo_game != '2' and modo_game != '3':
                 control_juego = False
                 print("----------------")
                 print("Opcion no valida")
                 print("----------------")
                 self.tres_en_raya()
             else:
-                control_juego = True
+                if modo_game == '3':
+                    control_juego = False
+                else:
+                    control_juego = True
 
             while control_juego:
                 tres.mostrar_tablero(tres,matriz_tablero)
@@ -91,11 +98,13 @@ class TresEnRaya:
                 if not control_juego:
                     jugar_otra = input("¿Quieres jugar otra vez? (s/n): ").lower()
                     if jugar_otra == 's':
+                        self.texto_inicial(self)
                         matriz_tablero, jugador_actual, control_juego = tres.reiniciar_juego(tres)
                         modo_game = input("Elige una opción (1 o 2): ")
                     else:
-                        break
+                        self.tres_en_raya(self)
         except:
             print("\n-----------------------------------------------------")
             print("Error el main principal del juego, salimos al menu")
             print("-----------------------------------------------------")
+
