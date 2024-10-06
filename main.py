@@ -6,9 +6,9 @@ def main():
    pre.salida = False
    tres.salida = False
    ahc.salida = False
-   #pre.inicio_preguntados(pre)
+   pre.inicio_preguntados(pre)
    #tres.tres_en_raya(tres)
-   ahc.menu(ahc)
+   #ahc.menu(ahc)
    print (pre.salida)
    print (tres.salida)
    print (ahc.salida)

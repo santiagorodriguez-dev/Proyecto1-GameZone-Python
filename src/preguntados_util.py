@@ -2,7 +2,43 @@
 import ast
 import random
 
-class Preguntados_Support:
+"""
+    Clase que proporciona utilidades para el juego de Preguntados.
+
+    Atributos:
+        categorias (list): Lista de categorías disponibles para las preguntas.
+        num_preguntas (int): Número total de preguntas a seleccionar para el juego.
+        num_para_victorias (int): Número de respuestas correctas necesarias para ganar.
+
+    Métodos:
+        read_data_file() -> dict:
+            Lee el archivo de datos y devuelve un diccionario con las preguntas.
+
+        todas_las_preguntas(input_data: dict, categorias: list) -> list:
+            Extrae todas las preguntas de las categorías proporcionadas en input_data.
+            Parámetros:
+                input_data (dict): Diccionario que contiene preguntas organizadas por categorías.
+                categorias (list): Lista de categorías de las que extraer las preguntas.
+        
+        list_random_preguntas(list_preguntas: list, num_random: int) -> list:
+            Selecciona un número aleatorio de preguntas de la lista proporcionada.
+            Parámetros:
+                list_preguntas (list): Lista de preguntas de las cuales seleccionar.
+                num_random (int): Número de preguntas a seleccionar aleatoriamente.
+        
+        extrae_respuestas_pregunta(pregunta: dict) -> list:
+            Extrae las respuestas de una pregunta dada y devuelve una lista de tuplas (respuesta, es_correcta).
+            Parámetros:
+                pregunta (dict): Pregunta de la cual extraer las respuestas.
+
+        input_data_valida() -> str:
+            Captura y valida la respuesta del usuario, retornando 'a', 'b', 'c', 'd' o 'z' si es inválida.
+        
+        mostrar_menu() -> None:
+            Muestra el menú principal del juego en la consola.
+"""
+
+class PreguntadosUtil:
 
     categorias = ["Cultura General", "Historia", "Entretenimiento", "Ciencia"]
     num_preguntas = 10
@@ -64,5 +100,5 @@ class Preguntados_Support:
         print("**  JUEGO APALABRADOS  **")
         print("*************************")
         print("1. Jugar")
-        print("2. Salir")
+        print("2. Salir al menu principal de juegos")
         print("*************************")
