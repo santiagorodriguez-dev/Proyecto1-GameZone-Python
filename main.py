@@ -1,5 +1,5 @@
 from src.preguntados import Preguntados as pre
-from src.tres_en_raya import Tres_En_Raya as tres
+from src.tres_en_raya import TresEnRaya as tres
 from src.ahorcados import AhorcadoMain as ahc
 
 def main():
@@ -7,8 +7,8 @@ def main():
    tres.salida = False
    ahc.salida = False
    #pre.inicio_preguntados(pre)
-   #tres.tres_en_raya(tres)
-   ahc.menu(ahc)
+   tres.tres_en_raya(tres)
+   #ahc.menu(ahc)
    print (pre.salida)
    print (tres.salida)
    print (ahc.salida)
