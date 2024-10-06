@@ -1,6 +1,6 @@
 import random
 
-class Ahorcado:
+class AhorcadoUtil:
     def __init__(self, palabras, intentos):
         self.palabra_secreta = random.choice(palabras).upper()
         self.intentos = intentos
